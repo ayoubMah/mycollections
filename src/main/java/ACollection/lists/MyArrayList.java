@@ -2,30 +2,32 @@ package ACollection.lists;
 
 import ACollection.interfaces.MyList;
 
-public class MyArrayList<T> implements MyList {
+public class MyArrayList<E> implements MyList<E> {
+
+    E [] arr;
 
     @Override
-    public void add() {
-
+    public boolean add(Object e) {
+        return false;
     }
 
     @Override
-    public void get() {
-
+    public E get(int index) {
+        return null;
     }
 
     @Override
-    public void set() {
-
+    public E set(int index, E e) {
+        return null;
     }
 
     @Override
-    public void remove() {
-
+    public E remove(int index) {
+        return null;
     }
 
     @Override
-    public void size() {
-
+    public int size() {
+        return 0;
     }
 }
