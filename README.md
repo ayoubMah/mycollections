@@ -1,118 +1,187 @@
-#  My Custom Java Collections Library
+# My Custom Java Collections Library
 
-A personal project to build core Java data structures from scratch, to deepen my understanding of DSA and Java internals.
-
----
-
-##  Purpose
-
-This library re-implements popular collections like ArrayList, LinkedList, Stack, Queue, HashMap, Set, and more.
-It’s designed for learning and practice.
+A personal project to build core Java data structures from scratch, to deeply understand DSA and Java internals.
 
 ---
 
-##  Progress Checklist
+## Purpose
 
-###  **Core Collections**
-
-- [ ] MyArrayList
-  - [ ] Add elements
-  - [ ] Get/Set by index
-  - [ ] Remove by index
-  - [ ] Dynamic resizing
-  - [ ] Iterator
-
-- [ ] MyLinkedList
-  - [ ] Singly linked list
-  - [ ] Doubly linked list
-  - [ ] AddFirst / AddLast
-  - [ ] RemoveFirst / RemoveLast
-
-- [ ] MyStack
-  - [ ] Backed by ArrayList or LinkedList
-  - [ ] Push / Pop / Peek
-  - [ ] isEmpty
-
-- [ ] MyQueue
-  - [ ] Enqueue / Dequeue / Peek
-  - [ ] Circular array version
-
-- [ ] MyDeque
-  - [ ] Insert/Remove both ends
+This library re-implements popular collections like arrays, ArrayList, LinkedList, Stack, Queue, HashMap, Set, Tree, Heap, and more — from scratch.  
+It’s designed for learning, practicing clean code, and building stuff.
 
 ---
 
-###  **Map & Set**
+### **Phase 0 — Raw Arrays**
 
-- [ ] MyHashMap
-  - [ ] Put / Get / Remove
-  - [ ] Handle collisions (chaining)
-  - [ ] Resizing
-
-- [ ] MyHashSet
-  - [ ] Based on MyHashMap
-
----
-
-###  **Trees & Heaps**
-
-- [ ] MyBinarySearchTree
-  - [ ] Insert / Delete / Search
-  - [ ] In-order / Pre-order / Post-order traversal
-
-- [ ] MyPriorityQueue (Heap)
-  - [ ] MinHeap
-  - [ ] MaxHeap
+#### ✅ RawIntArray
+- [ ] `add(value)`
+- [ ] `addAt(index, value)`
+- [ ] `removeAt(index)`
+- [ ] `remove(value)`
+- [ ] `find(value)`
+- [ ] `findBinary(value)`
+- [ ] `indexOf(value)`
+- [ ] `contains(value)`
+- [ ] `get(index)`
+- [ ] `set(index, value)`
+- [ ] `count()`
+- [ ] `isEmpty()`
+- [ ] `clear()`
+- [ ] `display()`
+- [ ] `sort()`
 
 ---
 
-###  **Infrastructure**
+### **Phase 1 — Lists**
 
-- [ ] Make collections Generic `<T>`
-- [ ] Implement Iterable / Iterator
-- [ ] Add unit tests (JUnit)
-- [ ] Write JavaDocs for all classes
-- [ ] Create example usage in `main()`
+#### ✅ MyArrayList<T>
+- [ ] `add(value)`
+- [ ] `addAt(index, value)`
+- [ ] `removeAt(index)`
+- [ ] `remove(value)`
+- [ ] `find(value)`
+- [ ] `indexOf(value)`
+- [ ] `contains(value)`
+- [ ] `get(index)`
+- [ ] `set(index, value)`
+- [ ] `count()`
+- [ ] `isEmpty()`
+- [ ] `clear()`
+- [ ] `toArray()`
+- [ ] `iterator()`
+
+#### ✅ MyLinkedList<T>
+- [ ] `add(value)`
+- [ ] `addFirst(value)`
+- [ ] `addLast(value)`
+- [ ] `remove(value)`
+- [ ] `removeFirst()`
+- [ ] `removeLast()`
+- [ ] `find(value)`
+- [ ] `indexOf(value)`
+- [ ] `contains(value)`
+- [ ] `get(index)`
+- [ ] `set(index, value)`
+- [ ] `count()`
+- [ ] `isEmpty()`
+- [ ] `clear()`
+- [ ] `iterator()`
+
+---
+
+### **Phase 2 — Linear Structures**
+
+#### ✅ MyStack<T>
+- [ ] `push(value)`
+- [ ] `pop()`
+- [ ] `peek()`
+- [ ] `isEmpty()`
+- [ ] `count()`
+- [ ] `clear()`
+
+#### ✅ MyQueue<T>
+- [ ] `enqueue(value)`
+- [ ] `dequeue()`
+- [ ] `peek()`
+- [ ] `isEmpty()`
+- [ ] `count()`
+- [ ] `clear()`
+
+#### ✅ MyDeque<T>
+- [ ] `addFirst(value)`
+- [ ] `addLast(value)`
+- [ ] `removeFirst()`
+- [ ] `removeLast()`
+- [ ] `peekFirst()`
+- [ ] `peekLast()`
+- [ ] `isEmpty()`
+- [ ] `count()`
+- [ ] `clear()`
+
+---
+
+### **Phase 3 — Map & Set**
+
+#### ✅ MyHashMap<K,V>
+- [ ] `add(key, value)`
+- [ ] `get(key)`
+- [ ] `remove(key)`
+- [ ] `containsKey(key)`
+- [ ] `containsValue(value)`
+- [ ] `keys()`
+- [ ] `values()`
+- [ ] `count()`
+- [ ] `isEmpty()`
+- [ ] `clear()`
+
+#### ✅ MyHashSet<T>
+- [ ] `add(value)`
+- [ ] `remove(value)`
+- [ ] `contains(value)`
+- [ ] `count()`
+- [ ] `isEmpty()`
+- [ ] `clear()`
+
+---
+
+### **Phase 4 — Trees & Heaps**
+
+#### ✅ MyBinarySearchTree<T>
+- [ ] `add(value)`
+- [ ] `remove(value)`
+- [ ] `find(value)`
+- [ ] `contains(value)`
+- [ ] `traverseInOrder()`
+- [ ] `traversePreOrder()`
+- [ ] `traversePostOrder()`
+- [ ] `getMin()`
+- [ ] `getMax()`
+- [ ] `count()`
+- [ ] `isEmpty()`
+- [ ] `clear()`
+
+#### ✅ MyPriorityQueue<T> (Heap)
+- [ ] `add(value)`
+- [ ] `poll()`
+- [ ] `peek()`
+- [ ] `isEmpty()`
+- [ ] `count()`
+- [ ] `clear()`
+
+---
+
+### **Phase 5 — Infrastructure**
+
+- [ ] Make all collections generic `<T>` or `<K,V>`
+- [ ] Implement `Iterable<T>` where needed
+- [ ] Add proper exceptions (`IndexOutOfBoundsException`, etc.)
+- [ ] Add JUnit tests for all
+- [ ] Add JavaDocs for all classes & methods
+- [ ] Make nice CLI banner (✅ already started!)
+- [ ] Example `main()` for each structure
 
 ---
 
 ## ✨ **Future Ideas**
 
-- [ ] TreeSet with AVL or Red-Black Tree
+- [ ] AVL Tree or Red-Black Tree
 - [ ] LRU Cache
 - [ ] Thread-safe collections
 - [ ] Serialization support
-- [ ] Publish as a Maven artifact
-- [ ] Benchmark vs. `java.util`
+- [ ] Publish as a Maven/Gradle artifact
+- [ ] Performance benchmarks vs. `java.util`
 
 ---
 
-##  How to Use
+## 💡 How to Use
 
-To explore or contribute to this project:
+Clone the repo and run your CLI banner:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/ayoubMah/mycollections.git
-    cd mycollections
-    ```
+```bash
 
-2.  **Compile the code:**
-    If you're using a build tool like Maven or Gradle, follow their respective build commands (e.g., `mvn compile` or `gradle build`).
-    
-    For manual compilation (assuming source files are in `src/main/java`):
-    ```bash
-    javac -d out src/main/java/**/*.java
-    ```
-
-3.  **Run examples or tests:**
-    *   **Examples:** Execute a class with a `main` method (e.g., if you have `MyArrayListDemo.java` in `src/main/java/com/example/collections/`):
-        ```bash
-        java -cp out com.ACollections.collections.MyArrayList
-        ```
-    *   **Tests:** If unit tests are implemented (e.g., with JUnit), you'd typically run them via your build tool (e.g., `mvn test` or `gradle test`).
-
----
+javac -d out src/**/*.java
+java MyCollectionsApp
+```
 
 ## 📜 License
 

@@ -70,4 +70,8 @@ public class Array {
         }
         return max;
     }
+
+    public void addAt(int index, int value){
+
+    }
 }
