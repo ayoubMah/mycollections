@@ -6,7 +6,7 @@ A personal project to build core Java data structures from scratch, to deeply un
 
 ## Purpose
 
-This library re-implements popular collections like arrays, ArrayList, LinkedList, Stack, Queue, HashMap, Set, Tree, Heap, and more — from scratch.  
+This library re-implements popular collections like arrays, ArrayList, LinkedList, Stack, Queue, HashMap, Set, Tree, Heap, and more — from scratch.
 It’s designed for learning, practicing clean code, and building stuff.
 
 ---
@@ -14,21 +14,22 @@ It’s designed for learning, practicing clean code, and building stuff.
 ### **Phase 0 — Raw Arrays**
 
 #### ✅ RawIntArray
-- [ ] `add(value)`
+- [X] `add(value)`
 - [ ] `addAt(index, value)`
 - [ ] `removeAt(index)`
-- [ ] `remove(value)`
-- [ ] `find(value)`
-- [ ] `findBinary(value)`
-- [ ] `indexOf(value)`
-- [ ] `contains(value)`
-- [ ] `get(index)`
-- [ ] `set(index, value)`
-- [ ] `count()`
-- [ ] `isEmpty()`
+- [X] `remove(value)`
+- [X] `find(value)`
+- [X] `findBinary(value)`
+- [X] `indexOf(value)`
+- [X] `contains(value)`
+- [X] `get(index)`
+- [X] `set(index, value)`
+- [X] `len()`
+- [X] `isEmpty()`
 - [ ] `clear()`
-- [ ] `display()`
+- [X] `display()`
 - [ ] `sort()`
+- [X] `max()`
 
 ---
 

@@ -21,7 +21,7 @@ public class Array {
     }
 
     // is an elm in the array
-    public boolean contain(int elm){
+    public boolean contains(int elm){
         int j;
         for (j=0; j < nElm; j++){
             if (arr[j] == elm) break;
@@ -70,6 +70,63 @@ public class Array {
         }
         return max;
     }
+
+    // get an element of a specific index
+    public int get(int index){
+        int j;
+        for(j = 0; j < nElm; j++){
+            if(j == index) break;
+        }
+        if(j == nElm){
+            System.out.println("this index is out of the bound so you'll get -1");
+            return -1;
+        }
+        return arr[j];
+
+    }
+
+    // set an element of a specific index => override it if an othe elm exist in this index
+    public void set(int index, int value){
+        int j;
+        for(j = 0; j < nElm; j++){
+            if(j == index) break;
+        }
+        if(j == nElm){
+            System.out.println("this index is out of the bound we don't set anything :)");
+        }
+        arr[j] = value;
+        System.out.println("the new value of the index: "+index+" is => "+value);
+    }
+
+
+    // indexOf(elm): to get the index of the elm if it is exist in the array if not you'll get -1
+    public int indexOf(int elm){
+        int j;
+        for(j = 0; j < nElm; j++){
+            if(arr[j] == elm) break;
+        }
+        if(j == nElm){
+            System.out.println("the elm "+elm+" doesn't exist in the array so you'll get -1");
+            return -1;
+        }
+        return j;
+    }
+
+    public boolean isEmpty(){
+        if(nElm == 0) return true;
+        return false;
+    }
+
+    // TODO: clear() method not completed
+    public void clear(){
+        int j;
+        for(j = 0; j < nElm; j++){
+            if(arr[j] != null) break;
+        }
+    }
+
+
+    // TODO: addAt method not completed
 
     public void addAt(int index, int value){
         int j = 0;

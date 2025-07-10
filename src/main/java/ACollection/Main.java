@@ -26,6 +26,7 @@ public class Main {
         System.out.println();
 
         Array array = new Array(100);
+        Array array1 = new Array(100); 
         array.add(3);
         array.add(5);
         array.add(2);
@@ -41,7 +42,7 @@ public class Main {
         System.out.println("the length of this arr is => "+array.len());
 
         System.out.println("==================================");
-        System.out.println("is the array contain the number 99 => "+array.contain(99));
+        System.out.println("is the array contain the number 99 => "+array.contains(99));
 
         System.out.println("==================================");
         System.out.println("the max of this array is => "+array.max());
@@ -53,14 +54,39 @@ public class Main {
         System.out.println(array.delete(2));
 
         System.out.println("==================================");
-        System.out.println("the new array is");
+        System.out.println("the last update of the array is :");
         array.display();
 
         System.out.println("==================================");
-        System.out.println("let's add 33 in the index 3");
-        array.addAt(3, 33);
-        System.out.println("the new array is");
+        System.out.println("let's see the elm of index 3");
+        System.out.println(array.get(3));
+
+        System.out.println("==================================");
+        System.out.println("let's set the value 707 in the index 5");
+
+        System.out.println("==================================");
+        System.out.println("the last update of the array is :");
+        array.set(5,707);
         array.display();
+
+        System.out.println("==================================");
+        System.out.println("let's see the index of the value 707 ");
+        System.out.println(array.indexOf(707));
+
+        System.out.println("==================================");
+        System.out.println("is it our array is empty ? "+ array.isEmpty());
+
+        System.out.println("==================================");
+        System.out.println("is it our array1 is empty ? "+ array1.isEmpty());
+
+
+        // System.out.println("==================================");
+        // System.out.println("let's add 33 in the index 3");
+        // array.addAt(3, 33);
+        // System.out.println("the new array is");
+        // array.display();
+
+
 
 
     }
