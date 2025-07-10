@@ -72,6 +72,20 @@ public class Array {
     }
 
     public void addAt(int index, int value){
+        int j = 0;
+        while (j < index) {
+            j++;
+        }
+        nElm++;
+        for (int k = j+1 ; k < nElm ; k++){
+            this.add(arr[k]);
+        }
+        arr[index] = value;
 
+
+//        for (int k = j + 1  ; k < nElm ; k++,j++){
+//            arr[k] = arr[k+1];
+//        }
+        //nElm ++;
     }
 }

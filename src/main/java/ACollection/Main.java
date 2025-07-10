@@ -56,6 +56,12 @@ public class Main {
         System.out.println("the new array is");
         array.display();
 
+        System.out.println("==================================");
+        System.out.println("let's add 33 in the index 3");
+        array.addAt(3, 33);
+        System.out.println("the new array is");
+        array.display();
+
 
     }
 }
