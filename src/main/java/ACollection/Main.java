@@ -3,28 +3,43 @@ package ACollection;
 import ACollection.array.Array;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println();
-        System.out.println("  __  __        _____      _ _             _   _             ");
-        System.out.println(" |  \\/  |      / ____|    | | |           | | (_)            ");
-        System.out.println(" | \\  / |_   _| |     ___ | | | ___   __ _| |_ _  ___  _ __  ");
-        System.out.println(" | |\\/| | | | | |    / _ \\| | |/ _ \\ / _` | __| |/ _ \\| '_ \\ ");
-        System.out.println(" | |  | | |_| | |___| (_) | | | (_) | (_| | |_| | (_) | | | |");
-        System.out.println(" |_|  |_|\\__, |\\_____\\___/|_|_|\\___/ \\__,_|\\__|_|\\___/|_| |_|");
-        System.out.println("          __/ |                                              ");
-        System.out.println("         |___/                                               ");
-        System.out.println();
-        System.out.println("  Your custom Java Data Structures library");
-        System.out.println("  =========================================");
-        System.out.println();
-        System.out.println("        \\   ^__^");
-        System.out.println("         \\  (oo)\\_______");
-        System.out.println("            (__)\\       )\\/\\");
-        System.out.println("                ||----w |");
-        System.out.println("                ||     ||");
-        System.out.println();
-        System.out.println();
 
+    public static final String PURPLE_BRIGHT = "\u001B[95m";
+    public static final String YELLOW_BRIGHT = "\u001B[93m";
+    public static final String CYAN_BRIGHT = "\u001B[96m";
+    public static final String RESET = "\u001B[0m";
+
+
+    public static final String BORDER = CYAN_BRIGHT + "≫" + RESET;
+
+    private static String createBorder(int length, String symbol) {
+        StringBuilder border = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            border.append(symbol);
+        }
+        return border.toString();
+    }
+
+    public static void main(String[] args) {
+
+
+
+
+        System.out.println();
+        System.out.println("  " + createBorder(110, BORDER));
+        System.out.println(PURPLE_BRIGHT +
+                " ███╗   ███╗██╗   ██╗     ██████╗ ██████╗ ██╗     ██╗     ███████╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗" + RESET);
+        System.out.println(YELLOW_BRIGHT +
+                " ████╗ ████║╚██╗ ██╔╝    ██╔════╝██╔═══██╗██║     ██║     ██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║" + RESET);
+        System.out.println(PURPLE_BRIGHT +
+                " ██╔████╔██║ ╚████╔╝     ██║     ██║   ██║██║     ██║     █████╗  ██║        ██║   ██║██║   ██║██╔██╗ ██║" + RESET);
+        System.out.println(YELLOW_BRIGHT +
+                " ██║╚██╔╝██║  ╚██╔╝      ██║     ██║   ██║██║     ██║     ██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║" + RESET);
+        System.out.println(PURPLE_BRIGHT +
+                " ██║ ╚═╝ ██║   ██║       ╚██████╗╚██████╔╝███████╗███████╗███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║" + RESET);
+        System.out.println(YELLOW_BRIGHT +
+                " ╚═╝     ╚═╝   ╚═╝        ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝" + RESET);
+        System.out.println("  " + createBorder(110, BORDER));
         Array array = new Array(100);
         Array array1 = new Array(100); 
         array.add(3);
@@ -79,12 +94,15 @@ public class Main {
         System.out.println("==================================");
         System.out.println("is it our array1 is empty ? "+ array1.isEmpty());
 
+        System.out.println("==================================");
+        System.out.println("our unsorted array is :");
+        array.display();
 
-        // System.out.println("==================================");
-        // System.out.println("let's add 33 in the index 3");
-        // array.addAt(3, 33);
-        // System.out.println("the new array is");
-        // array.display();
+        System.out.println("our sorted array is :");
+        array.bubbleSort();
+        array.display();
+
+
 
 
 

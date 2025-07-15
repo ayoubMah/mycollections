@@ -118,12 +118,12 @@ public class Array {
     }
 
     // TODO: clear() method not completed
-    public void clear(){
-        int j;
-        for(j = 0; j < nElm; j++){
-            if(arr[j] != null) break;
-        }
-    }
+//    public void clear(){
+//        int j;
+//        for(j = 0; j < nElm; j++){
+//            if(arr[j] != null) break;
+//        }
+//    }
 
 
     // TODO: addAt method not completed
@@ -144,5 +144,23 @@ public class Array {
 //            arr[k] = arr[k+1];
 //        }
         //nElm ++;
+    }
+
+    // bubble sort
+    // i'll call the swap method to swap 2 elms
+    public void swap(int index1, int index2){
+        int temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
+    }
+    public void bubbleSort(){
+        int i,j;
+        for(j = nElm - 1; j > 1; j-- ){
+            for (i = 0; i < j; i++ ){
+                if(arr[i] > arr[i+1]){
+                    swap(i, i+1);
+                }
+            }
+        }
     }
 }

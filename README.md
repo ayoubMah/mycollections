@@ -28,7 +28,7 @@ It’s designed for learning, practicing clean code, and building stuff.
 - [X] `isEmpty()`
 - [ ] `clear()`
 - [X] `display()`
-- [ ] `sort()`
+- [X] `bubbleSort()`
 - [X] `max()`
 
 ---
