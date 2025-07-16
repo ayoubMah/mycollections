@@ -99,7 +99,8 @@ public class Main {
         array.display();
 
         System.out.println("our sorted array is :");
-        array.bubbleSort();
+//        array.bubbleSort();
+        array.selectionSort();
         array.display();
 
 

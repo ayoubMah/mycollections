@@ -53,9 +53,11 @@ public class Array {
     // display the array as string
     public void display(){
         int j;
+        System.out.print("[ ");
         for (j = 0; j < nElm; j++){
-            System.out.print(arr[j] + "  ");
+            System.out.print(+arr[j] + "  ");
         }
+        System.out.print("]");
         System.out.println(" ");
     }
 
@@ -153,6 +155,7 @@ public class Array {
         arr[index1] = arr[index2];
         arr[index2] = temp;
     }
+
     public void bubbleSort(){
         int i,j;
         for(j = nElm - 1; j > 1; j-- ){
@@ -161,6 +164,31 @@ public class Array {
                     swap(i, i+1);
                 }
             }
+        }
+    }
+
+    public void selectionSort(){
+        int i,j,min;
+        for(i = 0; i < nElm -1; i++){
+            min = i;
+            for(j = i+1; j < nElm; j++){
+                if(arr[j] < arr[min]){
+                    swap(j, min);
+                }
+            }
+        }
+    }
+
+    public void insertionSort(){
+        int i,j;
+        for(i = 1; i < nElm; i++){
+            j = i - 1;
+            int temp = arr[i];
+            while(j > 0 && arr[j] > temp){
+                arr[j+1] = arr[j];
+                j --;
+            }
+            arr[j+1] = temp;
         }
     }
 }
