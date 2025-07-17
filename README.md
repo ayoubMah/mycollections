@@ -32,23 +32,24 @@ It’s designed for learning, practicing clean code, and building stuff.
 - [X] `selectionSort()`
 - [X] `insertionSort()`
 - [X] `max()`
+- [X] `Unit Tests ✅`
 
 ---
 
 ### **Phase 1 — Lists**
 
 #### ✅ MyArrayList<T>
-- [ ] `add(value)`
+- [X] `add(value)`
 - [ ] `addAt(index, value)`
 - [ ] `removeAt(index)`
 - [ ] `remove(value)`
 - [ ] `find(value)`
 - [ ] `indexOf(value)`
 - [ ] `contains(value)`
-- [ ] `get(index)`
-- [ ] `set(index, value)`
-- [ ] `count()`
-- [ ] `isEmpty()`
+- [X] `get(index)`
+- [X] `set(index, value)`
+- [ ] `size()`
+- [X] `isEmpty()`
 - [ ] `clear()`
 - [ ] `toArray()`
 - [ ] `iterator()`

@@ -1,6 +1,7 @@
 package ACollection;
 
 import ACollection.array.Array;
+import ACollection.lists.MyArrayList;
 
 public class Main {
 
@@ -40,70 +41,26 @@ public class Main {
         System.out.println(YELLOW_BRIGHT +
                 " ╚═╝     ╚═╝   ╚═╝        ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝" + RESET);
         System.out.println("  " + createBorder(110, BORDER));
-        Array array = new Array(100);
-        Array array1 = new Array(100); 
-        array.add(3);
-        array.add(5);
-        array.add(2);
-        array.add(7);
-        array.add(9);
-        array.add(1);
-        array.add(45);
-        array.add(99);
-
-        System.out.println("==================================");
-        array.display();
-        System.out.println("==================================");
-        System.out.println("the length of this arr is => "+array.len());
-
-        System.out.println("==================================");
-        System.out.println("is the array contain the number 99 => "+array.contains(99));
-
-        System.out.println("==================================");
-        System.out.println("the max of this array is => "+array.max());
-
-        System.out.println("==================================");
-        System.out.println(array.delete(100));
-
-        System.out.println("==================================");
-        System.out.println(array.delete(2));
-
-        System.out.println("==================================");
-        System.out.println("the last update of the array is :");
-        array.display();
-
-        System.out.println("==================================");
-        System.out.println("let's see the elm of index 3");
-        System.out.println(array.get(3));
-
-        System.out.println("==================================");
-        System.out.println("let's set the value 707 in the index 5");
-
-        System.out.println("==================================");
-        System.out.println("the last update of the array is :");
-        array.set(5,707);
-        array.display();
-
-        System.out.println("==================================");
-        System.out.println("let's see the index of the value 707 ");
-        System.out.println(array.indexOf(707));
-
-        System.out.println("==================================");
-        System.out.println("is it our array is empty ? "+ array.isEmpty());
-
-        System.out.println("==================================");
-        System.out.println("is it our array1 is empty ? "+ array1.isEmpty());
-
-        System.out.println("==================================");
-        System.out.println("our unsorted array is :");
-        array.display();
-
-        System.out.println("our sorted array is :");
-//        array.bubbleSort();
-        array.selectionSort();
-        array.display();
 
 
+        MyArrayList list = new MyArrayList(2);
+        System.out.println("empty list:");
+        list.display();
+        System.out.println("the size of the list is: " + list.size());
+        System.out.println("========================================");
+        list.add(55);
+        list.add(15);
+        list.add(30);
+        list.add(20);
+        list.display();
+        System.out.println("the size of the list is: " + list.size());
+
+        System.out.println("==========================================");
+        System.out.println("seting in the second index the value 45");
+        list.set(2, 45);
+        list.display();
+        System.out.println("==========================================");
+        System.out.println("getting the elm in index 0 => " + list.get(0));
 
 
 
