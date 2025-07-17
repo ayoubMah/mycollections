@@ -158,7 +158,7 @@ public class Array {
 
     public void bubbleSort(){
         int i,j;
-        for(j = nElm - 1; j > 1; j-- ){
+        for(j = nElm - 1; j > 0; j-- ){
             for (i = 0; i < j; i++ ){
                 if(arr[i] > arr[i+1]){
                     swap(i, i+1);
@@ -168,27 +168,30 @@ public class Array {
     }
 
     public void selectionSort(){
-        int i,j,min;
-        for(i = 0; i < nElm -1; i++){
+        int i, j, min;
+        for(i = 0; i < nElm - 1; i++){
             min = i;
-            for(j = i+1; j < nElm; j++){
+            for(j = i + 1; j < nElm; j++){
                 if(arr[j] < arr[min]){
-                    swap(j, min);
+                    min = j;
                 }
+            }
+            if(min != i) {
+                swap(i, min);
             }
         }
     }
 
     public void insertionSort(){
-        int i,j;
+        int i, j;
         for(i = 1; i < nElm; i++){
-            j = i - 1;
             int temp = arr[i];
-            while(j > 0 && arr[j] > temp){
-                arr[j+1] = arr[j];
-                j --;
+            j = i - 1;
+            while(j >= 0 && arr[j] > temp){
+                arr[j + 1] = arr[j];
+                j--;
             }
-            arr[j+1] = temp;
+            arr[j + 1] = temp;
         }
     }
 }
