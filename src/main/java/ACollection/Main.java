@@ -60,8 +60,8 @@ public class Main {
         list.display();
         System.out.println("==========================================");
         System.out.println("getting the elm in index 0 => " + list.get(0));
-
-
+        System.out.println("==========================================");
+        System.out.println("aoub".compareTo("aoua"));
 
 
     }
