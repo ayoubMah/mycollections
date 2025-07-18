@@ -1,18 +1,19 @@
 package ACollection.array;
 
-import org.junit.platform.commons.util.ToStringBuilder;
+import java.lang.reflect.Array;
 
-public class MyArray {
-    private Object [] arr;
+public class MyArray<E> {
+    private E [] arr;
     private int nElm;
 
     public MyArray(int capacity){
-        arr = new Object [capacity];
+        E[] arr = (E[]) new Object[capacity];
+        this.arr = arr;
         nElm = 0;
     }
 
     // insert method
-    public void add(Object elm){
+    public void add(E elm){
         arr[nElm] = elm;
         nElm ++ ;
     }
@@ -23,7 +24,7 @@ public class MyArray {
     }
 
     // is an elm in the array
-    public boolean contains(Object elm){
+    public boolean contains(E elm){
         int j;
         for (j=0; j < nElm; j++){
             if (arr[j].equals(elm)) break;
@@ -33,7 +34,7 @@ public class MyArray {
     }
 
     // delete a specific elm
-    public boolean delete(Object elm){
+    public boolean delete(E elm){
         int j;
         for (j = 0; j < nElm; j++){
             if (arr[j].equals(elm)) break;
@@ -57,7 +58,7 @@ public class MyArray {
         int j;
         System.out.print("[ ");
         for (j = 0; j < nElm; j++){
-            System.out.print(arr[j].toString() + "  ");
+            System.out.print(arr[j] + "  ");
         }
         System.out.print("]");
         System.out.println(" ");
@@ -76,6 +77,10 @@ public class MyArray {
 //    }
 
     // get an element of a specific index
+    public E get(int index){
+        if (index < 0 || index > nElm) return null;
+        return arr[index];
+    }
 //    public String get(int index){
 //        int j;
 //        for(j = 0; j < nElm; j++){
@@ -90,7 +95,7 @@ public class MyArray {
 //    }
 
     // set an element of a specific index => override it if an othe elm exist in this index
-    public void set(int index, Object value){
+    public void set(int index, E value){
         int j;
         for(j = 0; j < nElm; j++){
             if(j == index) break;
@@ -98,13 +103,13 @@ public class MyArray {
         if(j == nElm){
             System.out.println("this index is out of the bound we don't set anything :)");
         }
-        arr[j]=(value);
+        arr[j] = value;
         System.out.println("the new value of the index: "+index+" is => "+value);
     }
 
 
     // indexOf(elm): to get the index of the elm if it is exist in the array if not you'll get -1
-    public int indexOf(Object elm){
+    public int indexOf(E elm){
         int j;
         for(j = 0; j < nElm; j++){
             if(arr[j].equals(elm)) break;
