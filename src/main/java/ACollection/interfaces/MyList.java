@@ -10,9 +10,11 @@ public interface MyList<E> {
     public E get(int index);
     public void set(int index , E elm);
     public void display();
-    public boolean contains(E elm);
-    public boolean remove(E elm);
+    public boolean contains(Object elm);
+    //public boolean remove(E elm);
     public int indexOf(E elm);
+
+    // TODO : iterator, toArray, containsAll, addAll, removeAll, retainAll, clear, lastIndexOf, listItirator, subList
 
 
 }

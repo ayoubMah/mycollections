@@ -89,10 +89,10 @@ public class MyArrayList<E> implements MyList {
         return indexOf(elm) != -1;
     }
 
-    @Override
-    public boolean remove(Object elm) {
-        return false;
-    }
+//    @Override
+//    public boolean remove(Object elm) {
+//        return false;
+//    }
 
     @Override
     public int indexOf(Object elm) {
