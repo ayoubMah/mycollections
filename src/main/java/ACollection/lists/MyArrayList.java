@@ -4,7 +4,7 @@ package ACollection.lists;
 import ACollection.interfaces.MyList;
 
 public class MyArrayList implements MyList {
-    private final int DEFAULT_CAPACITY = 10; // the default capacity of our array
+    private final int DEFAULT_CAPACITY = 10; // the default capacity of our array i guess it is the same value as ArrayList in java
     private int[] arr;
     private int size;
 
@@ -14,7 +14,7 @@ public class MyArrayList implements MyList {
         size = 0;
     }
 
-    // if we want to call MyArrayList with a capacity you chose
+    // if i want to create an instance of MyArrayList with an explicite capacity
     public MyArrayList(int initialCapacity){
         arr = new int[initialCapacity];
         size = 0;

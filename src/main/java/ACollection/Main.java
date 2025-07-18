@@ -1,6 +1,5 @@
 package ACollection;
 
-import ACollection.array.Array;
 import ACollection.lists.MyArrayList;
 
 public class Main {
