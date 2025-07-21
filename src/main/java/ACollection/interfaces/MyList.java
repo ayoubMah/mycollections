@@ -4,15 +4,15 @@ package ACollection.interfaces;
 // we can't directly instantiate an instance from it but we'll pass with MyArrayList and MyLindedList
 
 public interface MyList<E> {
-    public int size();
-    public boolean isEmpty();
+    int size();
+    boolean isEmpty();
     boolean add(E e);
-    public E get(int index);
-    public void set(int index , E elm);
-    public void display();
-    public boolean contains(Object elm);
-    //public boolean remove(E elm);
-    public int indexOf(E elm);
+    E get(int index);
+    void set(int index , E elm);
+    void display();
+    boolean contains(Object elm);
+    boolean remove(E elm);
+    int indexOf(E elm);
 
     // TODO : iterator, toArray, containsAll, addAll, removeAll, retainAll, clear, lastIndexOf, listItirator, subList
 

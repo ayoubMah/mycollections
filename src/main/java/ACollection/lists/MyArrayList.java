@@ -89,6 +89,23 @@ public class MyArrayList<E> implements MyList {
         return indexOf(elm) != -1;
     }
 
+    @Override
+    public boolean remove(Object elm) {
+        int oldCapacity = arr.length;
+        int newCapacity = oldCapacity - 1;
+        int i;
+        if (contains(elm)){
+            for (i = 0; i < size; i++){
+                if (arr[i] == elm) break;
+            }
+            for (int j = i+1; j < newCapacity; j++ ){
+                arr[j] = arr[j-1];
+                arr = Arrays.copyOf(arr, newCapacity);
+            }
+        }
+        return false;
+    }
+
 //    @Override
 //    public boolean remove(Object elm) {
 //        return false;

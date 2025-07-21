@@ -54,14 +54,12 @@ public class Main {
         list.display();
         System.out.println("the size of the list is: " + list.size());
 
-        System.out.println("==========================================");
-        System.out.println("seting in the second index the value 45");
-        list.set(2, 45);
+        System.out.println("let's remove the elm 30");
+        list.remove(30);
         list.display();
-        System.out.println("==========================================");
-        System.out.println("getting the elm in index 0 => " + list.get(0));
-        System.out.println("==========================================");
-        System.out.println("aoub".compareTo("aoua"));
+        System.out.println("the size of the list is: " + list.size());
+
+
 
 
     }
