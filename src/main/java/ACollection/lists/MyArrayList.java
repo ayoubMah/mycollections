@@ -91,17 +91,12 @@ public class MyArrayList<E> implements MyList {
 
     @Override
     public boolean remove(Object elm) {
-        int oldCapacity = arr.length;
-        int newCapacity = oldCapacity - 1;
-        int i;
+        int index = indexOf(elm);
         if (contains(elm)){
-            for (i = 0; i < size; i++){
-                if (arr[i] == elm) break;
+            for (int i = index; i < size -1; i++ ){ // size -1 to not get out of bound exception
+                arr[i] = arr[i+1];
             }
-            for (int j = i+1; j < newCapacity; j++ ){
-                arr[j] = arr[j-1];
-                arr = Arrays.copyOf(arr, newCapacity);
-            }
+            arr[--size] = null; // or arr[size -1] = null; size --;
         }
         return false;
     }
