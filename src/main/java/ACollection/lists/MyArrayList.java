@@ -5,7 +5,7 @@ import ACollection.interfaces.MyList;
 
 import java.util.Arrays;
 
-public class MyArrayList<E> implements MyList {
+public class MyArrayList<E> implements MyList<E>{
     private final int DEFAULT_CAPACITY = 10; // the default capacity of my array i guess it is the same as ArrayList in java
     private E [] arr;
     private int size;
@@ -35,9 +35,9 @@ public class MyArrayList<E> implements MyList {
     }
 
     @Override
-    public boolean add(Object o) {
+    public boolean add(E o) {
         ensureCapacity(size+1);
-        arr[size++] = (E) o; // it is the same as i do arr[size] = o; size ++;
+        arr[size++] = o; // it is the same as i do arr[size] = o; size ++;
         return true;
     }
 
@@ -68,9 +68,9 @@ public class MyArrayList<E> implements MyList {
     }
 
     @Override
-    public void set(int index, Object elm) {
+    public void set(int index, E elm) {
         rangeCheck(index);
-        arr[index] = (E) elm;
+        arr[index] =  elm;
     }
 
     @Override
@@ -85,12 +85,12 @@ public class MyArrayList<E> implements MyList {
     }
 
     @Override
-    public boolean contains(Object elm) {
+    public boolean contains(E elm) {
         return indexOf(elm) != -1;
     }
 
     @Override
-    public boolean remove(Object elm) {
+    public boolean remove(E elm) {
         int index = indexOf(elm);
         if (contains(elm)){
             for (int i = index; i < size -1; i++ ){ // size -1 to not get out of bound exception
@@ -102,12 +102,12 @@ public class MyArrayList<E> implements MyList {
     }
 
 //    @Override
-//    public boolean remove(Object elm) {
+//    public boolean remove(E elm) {
 //        return false;
 //    }
 
     @Override
-    public int indexOf(Object elm) {
+    public int indexOf(E elm) {
         if (elm == null) {
             for(int i = 0; i < size; i++){
                 if(arr[i] == null){

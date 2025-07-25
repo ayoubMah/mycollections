@@ -10,7 +10,7 @@ public interface MyList<E> {
     E get(int index);
     void set(int index , E elm);
     void display();
-    boolean contains(Object elm);
+    boolean contains(E elm);
     boolean remove(E elm);
     int indexOf(E elm);
 
