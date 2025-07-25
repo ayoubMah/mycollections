@@ -72,7 +72,7 @@ public class MyArrayList<E> implements MyList<E>{
         rangeCheck(index);
         arr[index] =  elm;
     }
-
+    // we should not display null => so if the value is null, it should be empty
     @Override
     public void display() {
         int j;
@@ -101,10 +101,6 @@ public class MyArrayList<E> implements MyList<E>{
         return false;
     }
 
-//    @Override
-//    public boolean remove(E elm) {
-//        return false;
-//    }
 
     @Override
     public int indexOf(E elm) {
@@ -122,6 +118,14 @@ public class MyArrayList<E> implements MyList<E>{
             }
         }
         return -1;
+    }
+// [1  2  3  5  4]
+    @Override
+    public void clear() {
+        for(E elm: arr){
+            this.remove(elm);
+        }
+        System.out.println("the arr is empty");
     }
 
 }

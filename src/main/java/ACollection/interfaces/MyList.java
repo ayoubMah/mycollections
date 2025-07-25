@@ -13,8 +13,9 @@ public interface MyList<E> {
     boolean contains(E elm);
     boolean remove(E elm);
     int indexOf(E elm);
+    void clear();
 
-    // TODO : iterator, toArray, containsAll, addAll, removeAll, retainAll, clear, lastIndexOf, listItirator, subList
+    // TODO : iterator, toArray, containsAll, addAll, removeAll, retainAll,  lastIndexOf, listItirator, subList
 
 
 }
