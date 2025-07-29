@@ -89,6 +89,7 @@ public class MyArrayList<E> implements MyList<E>{
         return indexOf(elm) != -1;
     }
 
+    // remove the first founded elm if it was many of them
     @Override
     public boolean remove(E elm) {
         int index = indexOf(elm);
@@ -122,8 +123,10 @@ public class MyArrayList<E> implements MyList<E>{
 // [1  2  3  5  4]
     @Override
     public void clear() {
-        for(E elm: arr){
-            this.remove(elm);
+        while(!this.isEmpty()){
+            for(E elm: arr){
+                this.remove(elm);
+            }
         }
         System.out.println("the arr is empty");
     }

@@ -61,5 +61,18 @@ public class Main {
         list.clear();
         list.display();
 
+        System.out.println("========================================");
+        System.out.println("let's fill it again");
+        System.out.println("========================================");
+        list.add("ff");
+        list.add("coc");
+        list.add("vovo");
+        list.add("gigi");
+        list.add("ff");
+        list.add("ff");
+        list.display();
+
+        list.remove("ff");
+        list.display();
     }
 }
