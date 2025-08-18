@@ -40,17 +40,19 @@ It’s designed for learning, practicing clean code, and building stuff.
 
 #### ✅ MyArrayList<T>
 - [X] `add(value)`
+- [X] `display()`
 - [ ] `addAt(index, value)`
 - [ ] `removeAt(index)`
-- [ ] `remove(value)`
+- [X] `remove(value)`
+- [X] `removeAll(value)`
 - [ ] `find(value)`
-- [ ] `indexOf(value)`
-- [ ] `contains(value)`
+- [X] `indexOf(value)`
+- [X] `contains(value)`
 - [X] `get(index)`
 - [X] `set(index, value)`
-- [ ] `size()`
+- [X] `size()`
 - [X] `isEmpty()`
-- [ ] `clear()`
+- [X] `clear()`
 - [ ] `toArray()`
 - [ ] `iterator()`
 
