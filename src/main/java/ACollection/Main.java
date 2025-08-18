@@ -81,5 +81,8 @@ public class Main {
         list.removeAll("ff");
         list.display();
 
+        list.remove("ayoub");
+        list.display();
+
     }
 }
