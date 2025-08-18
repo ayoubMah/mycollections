@@ -102,6 +102,17 @@ public class MyArrayList<E> implements MyList<E>{
         return false;
     }
 
+  // remove the elms 'elm' from the list 
+  // for example if we have the list [5,3,6,6,2,5,6,8,9,4]
+  // and we want to remove the elm 6 so we get [5,3,2,5,8,9,4]
+    @Override
+    public boolean removeAll(E elm) {
+      while (indexOf(elm) != -1) {
+        this.remove(elm);
+      }
+      return false;
+    }
+
 
     @Override
     public int indexOf(E elm) {
