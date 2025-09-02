@@ -130,5 +130,11 @@ public class MyArrayList<E> implements MyList<E>{
         }
         System.out.println("the arr is empty");
     }
+    // TODO imp toArray method
+    @Override
+    public E[] toArray() {
+        return null;
+    }
+
 
 }

@@ -74,5 +74,7 @@ public class Main {
 
         list.remove("ff");
         list.display();
+        System.out.println((char)('A'+2));
+
     }
 }
