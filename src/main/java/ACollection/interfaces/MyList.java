@@ -12,6 +12,7 @@ public interface MyList<E> {
     void display();
     boolean contains(E elm);
     boolean remove(E elm);
+    boolean removeAll(E elm); // remove all elms 'elm' from the list
     int indexOf(E elm);
     void clear();
     E[] toArray();

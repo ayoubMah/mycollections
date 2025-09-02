@@ -72,9 +72,17 @@ public class Main {
         list.add("ff");
         list.display();
 
+//  ================================================================================================================
         list.remove("ff");
+        System.out.println("the list after removing the first ff");
         list.display();
-        System.out.println((char)('A'+2));
+
+        System.out.println("the list after removing all ff");
+        list.removeAll("ff");
+        list.display();
+
+        list.remove("ayoub");
+        list.display();
 
     }
 }
