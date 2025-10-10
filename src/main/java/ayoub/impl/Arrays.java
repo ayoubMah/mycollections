@@ -1,12 +1,10 @@
-package ACollection.array;
+package ayoub.impl;
 
-import java.lang.reflect.Array;
-
-public class MyArray<E> {
+public class Arrays<E> {
     private E [] arr;
     private int nElm;
 
-    public MyArray(int capacity){
+    public Arrays(int capacity){
         E[] arr = (E[]) new Object[capacity];
         this.arr = arr;
         nElm = 0;

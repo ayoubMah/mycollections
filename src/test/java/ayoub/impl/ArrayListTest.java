@@ -1,4 +1,4 @@
-package ACollection.lists;
+package ayoub.impl;
 
 
 import org.junit.jupiter.api.BeforeEach;
@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MyArrayListTest {
+class ArrayListTest {
 
-    private MyArrayList<Integer> list;
+    private ArrayList<Integer> list;
 
     @BeforeEach
     void setUp() {
-        list = new MyArrayList<>();
+        list = new ArrayList<>();
     }
 
     @Test

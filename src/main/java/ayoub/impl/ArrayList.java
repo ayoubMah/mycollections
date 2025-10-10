@@ -1,24 +1,24 @@
-package ACollection.lists;
+package ayoub.impl;
 
 
-import ACollection.interfaces.MyList;
+import ayoub.interfaces.MyList;
 
 import java.util.Arrays;
 
-public class MyArrayList<E> implements MyList<E>{
+public class ArrayList<E> implements MyList<E>{
     private final int DEFAULT_CAPACITY = 10; // the default capacity of my array i guess it is the same as ArrayList in java
     private E [] arr;
     private int size;
 
     // the default constructor
-    public MyArrayList(){
+    public ArrayList(){
         E[] arr = (E[]) new Object[DEFAULT_CAPACITY];
         this.arr = arr;
         size = 0;
     }
 
     // if i want to create an instance of MyArrayList with an explicite capacity
-    public MyArrayList(int initialCapacity){
+    public ArrayList(int initialCapacity){
         arr = (E[]) new Object[initialCapacity];;
         size = 0;
     }

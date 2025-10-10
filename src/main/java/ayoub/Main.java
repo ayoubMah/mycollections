@@ -1,6 +1,6 @@
-package ACollection;
+package ayoub;
 
-import ACollection.lists.MyArrayList;
+import ayoub.impl.ArrayList;
 
 public class Main {
 
@@ -42,7 +42,7 @@ public class Main {
         System.out.println("  " + createBorder(110, BORDER));
 
 
-        MyArrayList list = new MyArrayList(2);
+        ArrayList list = new ArrayList(2);
         System.out.println("empty list:");
         list.display();
         System.out.println("the size of the list is: " + list.size());
