@@ -1,4 +1,6 @@
 package ayoub.abstracts;
 
-public class AbstractList<E> {
+import ayoub.collections.List;
+
+public class AbstractList<E> implements List  {
 }

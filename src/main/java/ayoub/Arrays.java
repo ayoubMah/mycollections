@@ -1,4 +1,4 @@
-package ayoub.impl;
+package ayoub;
 
 public class Arrays<E> {
     private E [] arr;

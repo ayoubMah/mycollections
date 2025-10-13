@@ -1,7 +1,7 @@
-package ayoub.impl;
+package ayoub.list;
 
 
-import ayoub.interfaces.MyList;
+import ayoub.MyList;
 
 import java.util.Arrays;
 

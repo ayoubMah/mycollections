@@ -1,6 +1,6 @@
 package ayoub;
 
-import ayoub.impl.ArrayList;
+import ayoub.list.ArrayList;
 
 public class Main {
 
