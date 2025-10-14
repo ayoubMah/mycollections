@@ -1,5 +1,8 @@
 package ayoub.collections;
 
+import java.util.Iterator;
+import java.util.function.Consumer;
+
 public interface Collection<E> extends Iterable{
     boolean add(E e);
     boolean addAll(Collection<? extends E> c);
@@ -8,4 +11,7 @@ public interface Collection<E> extends Iterable{
     boolean containsAll(Collection<?> c);
     boolean equals(Object o);
     int hashCode();
+    boolean isEmpty();
+    Iterator<E> iterator();
+
 }
