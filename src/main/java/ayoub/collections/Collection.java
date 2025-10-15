@@ -1,17 +1,29 @@
 package ayoub.collections;
 
 import java.util.Iterator;
-import java.util.function.Consumer;
 
-public interface Collection<E> extends Iterable{
+public interface Collection<E> extends Iterable<E>{
+    // Adding elements
     boolean add(E e);
     boolean addAll(Collection<? extends E> c);
-    void clear(); // remove add elms of this collection
+
+    // Removing elements
+    boolean remove(Object o);
+    boolean removeAll(Collection<?> c);
+    void clear();
+
+    // Querying
     boolean contains(Object o);
     boolean containsAll(Collection<?> c);
-    boolean equals(Object o);
-    int hashCode();
+    int size();
     boolean isEmpty();
+
+    // Conversion
+    Object[] toArray();
+    <T> T[] toArray(T[] a);
+
+    // From Iterable
     Iterator<E> iterator();
 
+    // later i'll add the java8 features like streams and parallelstream
 }
