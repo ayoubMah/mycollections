@@ -14,7 +14,7 @@ A complete implementation of Java's Collection Framework from scratch - built fo
 
 ```
 my-collection-framework/
-├── src/main/java/com/yourname/collections/
+├── src/main/java/ayoub/collections/
 │   ├── interfaces/
 │   ├── abstracts/
 │   ├── list/
@@ -22,7 +22,7 @@ my-collection-framework/
 │   ├── queue/
 │   ├── map/
 │   └── util/
-└── src/test/java/com/yourname/collections/
+└── src/test/java/ayoub/collections/
 ```
 
 ## ✅ Implementation Checklist
