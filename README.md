@@ -13,8 +13,8 @@ A complete implementation of Java's Collection Framework from scratch - built fo
 ## 📦 Project Structure
 
 ```
-my-collection-framework/
-├── src/main/java/ayoub/collections/
+mycollections/
+├── src/main/java/ayoub/Collections/
 │   ├── interfaces/
 │   ├── abstracts/
 │   ├── list/
@@ -22,7 +22,7 @@ my-collection-framework/
 │   ├── queue/
 │   ├── map/
 │   └── util/
-└── src/test/java/ayoub/collections/
+└── src/test/java/ayoub/Collections/
 ```
 
 ## ✅ Implementation Checklist
@@ -30,16 +30,16 @@ my-collection-framework/
 ### Phase 1: Foundation & List Implementations
 
 #### Core Interfaces
-- [ ] `Collection<E>` interface (extends `Iterable<E>`)
+- [ ] `MyCollection<E>` interface (extends `Iterable<E>`)
 - [ ] `Iterator<E>` interface (or use `java.util.Iterator`)
-- [ ] `List<E>` interface (extends `Collection<E>`)
+- [ ] `MyList<E>` interface (extends `MyCollection<E>`)
 
 #### Abstract Classes
-- [ ] `AbstractCollection<E>` (implements `Collection<E>`)
-- [ ] `AbstractList<E>` (extends `AbstractCollection`, implements `List<E>`)
+- [ ] `AbstractMyCollection<E>` (implements `MyCollection<E>`)
+- [ ] `MyAbstractList<E>` (extends `AbstractMyCollection`, implements `MyList<E>`)
 
 #### ArrayList Implementation
-- [ ] `ArrayList<E>` class
+- [ ] `MyArrayList<E>` class
     - [ ] Internal array storage
     - [ ] Constructor(s) - default capacity
     - [ ] `add(E element)` with dynamic resizing
@@ -54,10 +54,10 @@ my-collection-framework/
     - [ ] Inner class: `ArrayListIterator` implementing `Iterator<E>`
     - [ ] `iterator()` method
     - [ ] Fail-fast iterator (ConcurrentModificationException)
-- [ ] `ArrayListTest` - comprehensive unit tests
+- [ ] `MyArrayListTest` - comprehensive unit tests
 
 #### LinkedList Implementation
-- [ ] `LinkedList<E>` class
+- [ ] `MyLinkedList<E>` class
     - [ ] Node inner class (with `data`, `next`, `prev`)
     - [ ] Head and tail references
     - [ ] `add(E element)` - add to end
@@ -71,10 +71,10 @@ my-collection-framework/
     - [ ] Inner class: `LinkedListIterator`
     - [ ] `iterator()` method
     - [ ] Fail-fast iterator
-- [ ] `LinkedListTest` - comprehensive unit tests
+- [ ] `MyLinkedListTest` - comprehensive unit tests
 
 #### Stack Implementation
-- [ ] `Stack<E>` class
+- [ ] `MyStack<E>` class
     - [ ] `push(E element)`
     - [ ] `pop()`
     - [ ] `peek()`
@@ -87,44 +87,44 @@ my-collection-framework/
 ### Phase 2: Queue & Deque
 
 #### Interfaces
-- [ ] `Queue<E>` interface (extends `Collection<E>`)
-- [ ] `Deque<E>` interface (extends `Queue<E>`)
+- [ ] `MyQueue<E>` interface (extends `MyCollection<E>`)
+- [ ] `MyDeque<E>` interface (extends `Queue<E>`)
 
 #### Abstract Classes
-- [ ] `AbstractQueue<E>` (extends `AbstractCollection`, implements `Queue<E>`)
+- [ ] `MyAbstractQueue<E>` (extends `AbstractMyCollection`, implements `MyQueue<E>`)
 
 #### Implementations
-- [ ] Update `LinkedList<E>` to implement `Deque<E>`
+- [ ] Update `MyLinkedList<E>` to implement `MyDeque<E>`
     - [ ] `offer(E element)`, `poll()`, `peek()`
     - [ ] `offerFirst()`, `offerLast()`
     - [ ] `pollFirst()`, `pollLast()`
     - [ ] `peekFirst()`, `peekLast()`
 
-- [ ] `ArrayDeque<E>` class
+- [ ] `MyArrayDeque<E>` class
     - [ ] Circular array implementation
     - [ ] All deque operations
     - [ ] Dynamic resizing
-- [ ] `ArrayDequeTest` - unit tests
+- [ ] `MyArrayDequeTest` - unit tests
 
 ---
 
 ### Phase 3: Map Implementations (Hash-Based)
 
 #### Map Interfaces
-- [ ] `Map<K, V>` interface (standalone, NOT extending Collection)
+- [ ] `MyMap<K, V>` interface (standalone, NOT extending MyCollection)
     - [ ] `put(K key, V value)`
     - [ ] `get(Object key)`
     - [ ] `remove(Object key)`
     - [ ] `containsKey(Object key)`, `containsValue(Object value)`
     - [ ] `size()`, `isEmpty()`, `clear()`
     - [ ] `keySet()`, `values()`, `entrySet()`
-- [ ] `Map.Entry<K, V>` inner interface
+- [ ] `MyMap.Entry<K, V>` inner interface
 
 #### Abstract Classes
-- [ ] `AbstractMap<K, V>` (implements `Map<K, V>`)
+- [ ] `MyAbstractMap<K, V>` (implements `Map<K, V>`)
 
 #### HashMap Implementation
-- [ ] `HashMap<K, V>` class
+- [ ] `MyHashMap<K, V>` class
     - [ ] Internal array of buckets (Entry[])
     - [ ] Hash function
     - [ ] Collision resolution (separate chaining with linked list)
@@ -140,61 +140,61 @@ my-collection-framework/
 - [ ] `HashMapTest` - comprehensive unit tests
 
 #### LinkedHashMap Implementation
-- [ ] `LinkedHashMap<K, V>` class (extends `HashMap`)
+- [ ] `MyLinkedHashMap<K, V>` class (extends `HashMap`)
     - [ ] Maintains insertion order with doubly-linked list
     - [ ] Override necessary methods
-- [ ] `LinkedHashMapTest` - unit tests
+- [ ] `MyLinkedHashMapTest` - unit tests
 
 ---
 
 ### Phase 4: Set Implementations (Hash-Based)
 
 #### Set Interfaces
-- [ ] `Set<E>` interface (extends `Collection<E>`)
+- [ ] `MySet<E>` interface (extends `MyCollection<E>`)
     - [ ] No duplicate elements
     - [ ] No index-based access
 
 #### Abstract Classes
-- [ ] `AbstractSet<E>` (extends `AbstractCollection`, implements `Set<E>`)
+- [ ] `MyAbstractSet<E>` (extends `AbstractMyCollection`, implements `MySet<E>`)
 
 #### HashSet Implementation
-- [ ] `HashSet<E>` class
-    - [ ] Internal `HashMap<E, Object>` (value is dummy object)
+- [ ] `MyHashSet<E>` class
+    - [ ] Internal `MyHashMap<E, Object>` (value is dummy object)
     - [ ] `add(E element)` - returns false if duplicate
     - [ ] `remove(Object o)`
     - [ ] `contains(Object o)` - O(1) average
     - [ ] `size()`, `isEmpty()`, `clear()`
     - [ ] `iterator()`
-- [ ] `HashSetTest` - unit tests
+- [ ] `MyHashSetTest` - unit tests
 
 #### LinkedHashSet Implementation
-- [ ] `LinkedHashSet<E>` class (extends `HashSet`)
-    - [ ] Uses `LinkedHashMap` internally
+- [ ] `MyLinkedHashSet<E>` class (extends `MyHashSet`)
+    - [ ] Uses `MyLinkedHashMap` internally
     - [ ] Maintains insertion order
-- [ ] `LinkedHashSetTest` - unit tests
+- [ ] `MyLinkedHashSetTest` - unit tests
 
 ---
 
-### Phase 5: Sorted Collections (Tree-Based)
+### Phase 5: Sorted MyCollections (Tree-Based)
 
 #### Utility Interfaces
-- [ ] `Comparator<T>` interface
+- [ ] `MyComparator<T>` interface
     - [ ] `compare(T o1, T o2)`
 - [ ] Use `java.lang.Comparable<T>` (built-in)
 
 #### Sorted Interfaces
-- [ ] `SortedMap<K, V>` interface (extends `Map<K, V>`)
+- [ ] `MySortedMap<K, V>` interface (extends `MyMap<K, V>`)
     - [ ] `firstKey()`, `lastKey()`
     - [ ] `subMap()`, `headMap()`, `tailMap()`
     - [ ] `comparator()`
 
-- [ ] `SortedSet<E>` interface (extends `Set<E>`)
+- [ ] `MySortedSet<E>` interface (extends `MySet<E>`)
     - [ ] `first()`, `last()`
     - [ ] `subSet()`, `headSet()`, `tailSet()`
     - [ ] `comparator()`
 
 #### TreeMap Implementation
-- [ ] `TreeMap<K, V>` class (Red-Black Tree)
+- [ ] `MyTreeMap<K, V>` class (Red-Black Tree)
     - [ ] Node inner class (key, value, color, left, right, parent)
     - [ ] `put(K key, V value)` with BST insertion + balancing
     - [ ] Red-Black Tree rotations (left, right)
@@ -205,24 +205,24 @@ my-collection-framework/
     - [ ] `firstKey()`, `lastKey()`
     - [ ] `comparator()` support
     - [ ] Iterator with in-order traversal
-- [ ] `TreeMapTest` - unit tests
+- [ ] `MyTreeMapTest` - unit tests
 
 #### TreeSet Implementation
-- [ ] `TreeSet<E>` class
-    - [ ] Internal `TreeMap<E, Object>` (value is dummy)
+- [ ] `MyTreeSet<E>` class
+    - [ ] Internal `MyTreeMap<E, Object>` (value is dummy)
     - [ ] `add(E element)` - maintains sorted order
     - [ ] `remove(Object o)` - O(log n)
     - [ ] `contains(Object o)` - O(log n)
     - [ ] `first()`, `last()`
     - [ ] `iterator()` returns sorted iterator
-- [ ] `TreeSetTest` - unit tests
+- [ ] `MyTreeSetTest` - unit tests
 
 ---
 
 ### Phase 6: Priority Queue (Heap-Based)
 
 #### PriorityQueue Implementation
-- [ ] `PriorityQueue<E>` class
+- [ ] `MyPriorityQueue<E>` class
     - [ ] Internal array-based binary heap
     - [ ] Min-heap or max-heap (with Comparator support)
     - [ ] `offer(E element)` - heapify up
@@ -231,33 +231,33 @@ my-collection-framework/
     - [ ] `size()`, `isEmpty()`, `clear()`
     - [ ] Comparator support
     - [ ] Dynamic resizing
-- [ ] `PriorityQueueTest` - unit tests
+- [ ] `MyPriorityQueueTest` - unit tests
 
 ---
 
-### Phase 7: Legacy Collections (Optional)
+### Phase 7: Legacy MyCollections (Optional)
 
-- [ ] `Vector<E>` class (synchronized ArrayList)
+- [ ] `MyVector<E>` class (synchronized ArrayList)
     - [ ] All ArrayList operations
     - [ ] Synchronized methods
-- [ ] `VectorTest` - unit tests
+- [ ] `MyVectorTest` - unit tests
 
-- [ ] `Hashtable<K, V>` class (synchronized HashMap)
+- [ ] `MyHashtable<K, V>` class (synchronized HashMap)
     - [ ] All HashMap operations
     - [ ] Synchronized methods
     - [ ] No null keys or values
-- [ ] `HashtableTest` - unit tests
+- [ ] `MyHashtableTest` - unit tests
 
 ---
 
 ### Phase 8: Utility Classes
 
-- [ ] `Objects` utility class
+- [ ] `MyObjects` utility class
     - [ ] `equals(Object a, Object b)` null-safe
     - [ ] `hashCode(Object o)` null-safe
     - [ ] `requireNonNull(T obj)`
 
-- [ ] `Collections` utility class (optional advanced)
+- [ ] `MyCollections` utility class (optional advanced)
     - [ ] `sort(List<T> list)`
     - [ ] `reverse(List<?> list)`
     - [ ] `shuffle(List<?> list)`
@@ -333,7 +333,7 @@ my-collection-framework/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/my-collection-framework.git
+git clone https://github.com/ayoubMah/mycollections.git
 
 # Build the project
 mvn clean install
@@ -351,7 +351,7 @@ mvn jacoco:report
 
 - **Start simple**: ArrayList → LinkedList → HashMap → HashSet → TreeMap → TreeSet
 - **Test-driven development**: Write tests first, then implement
-- **Don't skip abstracts**: AbstractCollection and AbstractList save you tons of code
+- **Don't skip abstracts**: AbstractMyCollecFtion and AbstractList save you tons of code
 - **Iterator is crucial**: Fail-fast behavior is important for correctness
 - **HashMap before HashSet**: HashSet is just a HashMap wrapper!
 - **TreeMap before TreeSet**: TreeSet is just a TreeMap wrapper!
