@@ -35,7 +35,7 @@ public abstract class AbstractMyCollection<E> implements MyCollection<E> {
         for (int i = 0; i < len; i++){
             arr[i] = it.next();
         }
-        System.out.println("the collection converted successfully!");
+        System.out.println("the collection converted successfully!");// TODO: later replace it with loggs
         return arr;
     }
 
@@ -63,7 +63,7 @@ public abstract class AbstractMyCollection<E> implements MyCollection<E> {
             E elm = it.next();
             it.remove();
         }
-        System.out.println("the collection cleaned successfully!");
+        System.out.println("the collection cleaned successfully!"); // TODO: later replace it with loggs
     }
 
     // just to see how it's looks like
