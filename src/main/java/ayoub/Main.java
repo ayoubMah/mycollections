@@ -63,6 +63,7 @@ public class Main {
         col.add("ayoub");
         col.add("simo");
         col.add("bard");
+        col.add(null);
         col.add("youssef");
 
         System.out.println("Size : " + col.size());
@@ -73,6 +74,19 @@ public class Main {
         System.out.println("to array");
         col.toArray();
         col.looks();
+
+        System.out.println("let's remove simo");
+        col.remove("simo");
+        System.out.println("the new collection looks like");
+        col.looks();
+
+
+        System.out.println("let's remove null");
+        col.remove(null);
+        System.out.println("the new collection looks like");
+        col.looks();
+
+
 
 
 

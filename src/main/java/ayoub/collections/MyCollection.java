@@ -6,7 +6,7 @@ public interface MyCollection<E> extends Iterable<E>{
     //boolean addAll(Collection<? extends E> c);
 
     // Removing elements
-    //boolean remove(Object o);
+    boolean remove(Object o);
     //boolean removeAll(Collection<?> c);
     //void clear();
 
