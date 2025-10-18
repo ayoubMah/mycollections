@@ -17,7 +17,7 @@ public interface MyCollection<E> extends Iterable<E>{
     boolean isEmpty();
 
     // Conversion
-    //Object[] toArray();
+    Object[] toArray();
     //<T> T[] toArray(T[] a);
 
     // From Iterable

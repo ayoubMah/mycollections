@@ -63,7 +63,6 @@ public class Main {
         col.add("ayoub");
         col.add("simo");
         col.add("bard");
-        col.add(null);
         col.add("youssef");
 
         System.out.println("Size : " + col.size());
@@ -71,8 +70,11 @@ public class Main {
         System.out.println("is my collection has ayoub? =>" + col.contains("ayoub"));
         System.out.println("is my collection has null? =>" + col.contains(null));
 
+        System.out.println("to array");
+        col.toArray();
+        col.looks();
 
-        System.out.println("is my col empty ?"+ col.isEmpty());
+
 
     }
 }

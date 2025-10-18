@@ -30,8 +30,8 @@ mycollections/
 ### Phase 1: Foundation & List Implementations
 
 #### Core Interfaces
-- [ ] `MyCollection<E>` interface (extends `Iterable<E>`)
-- [ ] `Iterator<E>` interface (or use `java.util.Iterator`)
+- [x] `MyCollection<E>` interface (extends `Iterable<E>`)
+- [x] `Iterator<E>` interface (I use just `java.util.Iterator`)
 - [ ] `MyList<E>` interface (extends `MyCollection<E>`)
 
 #### Abstract Classes
