@@ -8,7 +8,7 @@ public interface MyCollection<E> extends Iterable<E>{
     // Removing elements
     boolean remove(Object o);
     //boolean removeAll(Collection<?> c);
-    //void clear();
+    void clear();
 
     // Querying
     boolean contains(Object o);

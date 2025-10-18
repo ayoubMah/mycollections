@@ -86,6 +86,10 @@ public class Main {
         System.out.println("the new collection looks like");
         col.looks();
 
+        System.out.println("let's clean this collection");
+        col.clear();
+        col.looks();
+
 
 
 

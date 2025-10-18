@@ -49,11 +49,21 @@ public abstract class AbstractMyCollection<E> implements MyCollection<E> {
         while (it.hasNext()) {
             E elm = it.next();
             if (elm == null ? o == null : elm.equals(o)) {
-                it.remove();
+                it.remove(); // the remove func provided by Iterator interface
                 return true;
             }
         }
         return false;
+    }
+
+    //TODO: clear()
+    public void clear(){
+        Iterator<E> it = this.iterator();
+        while (it.hasNext()){
+            E elm = it.next();
+            it.remove();
+        }
+        System.out.println("the collection cleaned successfully!");
     }
 
     // just to see how it's looks like
