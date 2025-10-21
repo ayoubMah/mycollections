@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Main {
 
-    static class TestMyCollection<E> extends AbstractMyCollection<E> {
+    /*static class TestMyCollection<E> extends AbstractMyCollection<E> {
         private final List<E> data = new ArrayList<>();
 
         @Override
@@ -26,7 +26,7 @@ public class Main {
         public boolean add(E e) {
             return data.add(e);
         }
-    }
+    }*/
 
 
 
@@ -59,7 +59,7 @@ public class Main {
         System.out.println("  " + createBorder(110, BORDER));
         // ========================================================================================
 
-        TestMyCollection col = new TestMyCollection<>();
+        /*TestMyCollection col = new TestMyCollection<>();
         col.add("ayoub");
         col.add("simo");
         col.add("bard");
@@ -88,7 +88,7 @@ public class Main {
 
         System.out.println("let's clean this collection");
         col.clear();
-        col.looks();
+        col.looks();*/
 
 
     }

@@ -2,11 +2,62 @@ package ayoub.list;
 
 
 import ayoub.MyList;
+import ayoub.abstracts.AbstractMyList;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
-public class MyArrayList<E> implements MyList<E>{
-    private final int DEFAULT_CAPACITY = 10; // the default capacity of my array i guess it is the same as ArrayList in java
+public class MyArrayList<E> extends AbstractMyList<E> {
+    @Override
+    public E get(int index) {
+        return null;
+    }
+
+    @Override
+    public E set(int index, E elm) {
+        return null;
+    }
+
+    @Override
+    public void add(int index, E elm) {
+
+    }
+
+    @Override
+    public E remove(int index) {
+        return null;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return null;
+    }
+
+    @Override
+    public boolean add(E e) {
+        return false;
+    }
+
+    @Override
+    public int size() {
+        return 0;
+    }
+
+
+
+
+
+    /*private final int DEFAULT_CAPACITY = 10; // the default capacity of my array i guess it is the same as ArrayList in java
     private E [] arr;
     private int size;
 
@@ -145,7 +196,7 @@ public class MyArrayList<E> implements MyList<E>{
     @Override
     public E[] toArray() {
         return null;
-    }
+    }*/
 
 
 }
