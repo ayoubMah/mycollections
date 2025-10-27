@@ -6,20 +6,58 @@ import ayoub.abstracts.MyAbstractList;
 import java.util.Iterator;
 
 public class MyArrayList<E> extends MyAbstractList<E> {
-    @Override
-    public E get(int index) {
-        return null;
+
+    private static final int DEFAULT_CAPACITY = 10;
+    private E[] arr;
+    private int size;
+
+    public MyArrayList(){
+        arr = (E[])new Object[DEFAULT_CAPACITY];
+        size = 0;
     }
 
     @Override
+    public int size() {
+        return size;
+    }
+
+    private void rangeCheck(int index) {
+    }
+
+    public void ensureCapacity(int index){
+
+    }
+
+    @Override
+    public E get(int index) {
+        // before we return it -> we should verify if the index not out of the array
+        rangeCheck(index);
+        return arr[index];
+    }
+
+    // return the prev elm that was reserved in arr[index]
+    @Override
     public E set(int index, E elm) {
-        return null;
+        rangeCheck(index);
+        E prevElm = arr[index];
+        arr[index] = elm;
+        return prevElm;
     }
 
     @Override
     public void add(int index, E elm) {
-
+        ensureCapacity(size+1);
+        arr[index] = elm;
+        size++;
     }
+
+    @Override
+    public boolean add(E elm) {
+        ensureCapacity(size + 1);
+        arr[size + 1] = elm;
+        return true;
+    }
+
 
     @Override
     public E remove(int index) {
@@ -40,19 +78,6 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     public Iterator<E> iterator() {
         return null;
     }
-
-    @Override
-    public boolean add(E e) {
-        return false;
-    }
-
-    @Override
-    public int size() {
-        return 0;
-    }
-
-
-
 
 
     /*private final int DEFAULT_CAPACITY = 10; // the default capacity of my array i guess it is the same as ArrayList in java
