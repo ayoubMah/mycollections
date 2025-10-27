@@ -2,5 +2,5 @@ package ayoub.abstracts;
 
 import ayoub.collections.MySet;
 
-public abstract class AbstractMySet implements MySet {
+public abstract class MyAbstractSet implements MySet {
 }

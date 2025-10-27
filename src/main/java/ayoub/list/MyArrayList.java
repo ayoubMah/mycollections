@@ -1,13 +1,11 @@
 package ayoub.list;
 
 
-import ayoub.MyList;
-import ayoub.abstracts.AbstractMyList;
+import ayoub.abstracts.MyAbstractList;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
-public class MyArrayList<E> extends AbstractMyList<E> {
+public class MyArrayList<E> extends MyAbstractList<E> {
     @Override
     public E get(int index) {
         return null;

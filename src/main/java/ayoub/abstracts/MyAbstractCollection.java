@@ -4,7 +4,7 @@ import ayoub.collections.MyCollection;
 
 import java.util.Iterator;
 
-public abstract class AbstractMyCollection<E> implements MyCollection<E> {
+public abstract class MyAbstractCollection<E> implements MyCollection<E> {
 
     // this 2 methods are abst cuz they'll be different in imp for each collection: list, linkedlist ...
     public abstract Iterator<E> iterator();

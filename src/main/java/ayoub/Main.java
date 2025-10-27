@@ -1,12 +1,6 @@
 package ayoub;
 
 
-import ayoub.abstracts.AbstractMyCollection;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 public class Main {
 
     /*static class TestMyCollection<E> extends AbstractMyCollection<E> {

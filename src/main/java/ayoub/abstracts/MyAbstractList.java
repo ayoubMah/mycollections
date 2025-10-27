@@ -2,9 +2,7 @@ package ayoub.abstracts;
 
 import ayoub.collections.MyList;
 
-import java.util.Iterator;
-
-public abstract class AbstractMyList<E> extends AbstractMyCollection<E> implements MyList<E> {
+public abstract class MyAbstractList<E> extends MyAbstractCollection<E> implements MyList<E> {
 
     // Abstract Methods ===============================================================================================================
     public abstract E get(int index); // it's abst cuz it needs storage info
