@@ -16,16 +16,16 @@ public abstract class MyAbstractList<E> extends MyAbstractCollection<E> implemen
     public boolean add(E elm){
         int index = size(); // the current index of it
         add(index , elm); // add the elm in the tail of the collection
+        System.out.println("the elm added successfully!");
         return size() == index + 1 ; // if the new size() == the prev size() + 1 , cuz we add just by one
     }
 
     // TODO: cas of null object => o == null!
     public int indexOf(Object o){
-        int index = 0;
-        while (!o.equals(get(index))){
-            index ++;
+        for (int i = 0; i < size(); i++){
+            if (get(i).equals(o)) return i;
         }
-        return index;
+        return -1;
     }
 
     // imp methods

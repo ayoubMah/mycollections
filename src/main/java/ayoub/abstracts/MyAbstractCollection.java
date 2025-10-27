@@ -17,7 +17,7 @@ public abstract class MyAbstractCollection<E> implements MyCollection<E> {
 
     //TODO : contains(Object o)
     public boolean contains(Object o) {
-        Iterator<E> it = this.iterator();
+        Iterator<E> it = iterator();
         while (it.hasNext()) {
             E elm = it.next();
             if (elm == null ? o == null : elm.equals(o)) { // we can do it with Objects.equals(elm, o)
@@ -29,13 +29,13 @@ public abstract class MyAbstractCollection<E> implements MyCollection<E> {
 
     // TODO: toArray()
     public Object[] toArray(){
-        Iterator<E> it = this.iterator();
+        Iterator<E> it = iterator();
         int len = this.size();
         Object[] arr = new Object[len];
         for (int i = 0; i < len; i++){
             arr[i] = it.next();
         }
-        System.out.println("the collection converted successfully!");// TODO: later replace it with loggs
+        System.out.println("the collection converted successfully!");// TODO: later replace it with logs
         return arr;
     }
 
@@ -45,11 +45,12 @@ public abstract class MyAbstractCollection<E> implements MyCollection<E> {
         // like col = [1,2,3,3,4,2] => col.remove(2) => col = [1,3,3,4,2]
         // even it's a null elm, we apply the same logic
         // return false if not exist in the col
-        Iterator<E> it = this.iterator();
+        Iterator<E> it = iterator();
         while (it.hasNext()) {
             E elm = it.next();
             if (elm == null ? o == null : elm.equals(o)) {
                 it.remove(); // the remove func provided by Iterator interface
+                System.out.println("the elm removed successfully!"); // logs better
                 return true;
             }
         }
@@ -58,34 +59,19 @@ public abstract class MyAbstractCollection<E> implements MyCollection<E> {
 
     //TODO: clear()
     public void clear(){
-        Iterator<E> it = this.iterator();
+        Iterator<E> it = iterator();
         while (it.hasNext()){
-            E elm = it.next();
+            it.next();
             it.remove();
         }
-        System.out.println("the collection cleaned successfully!"); // TODO: later replace it with loggs
+        System.out.println("the collection cleaned successfully!"); // TODO: later replace it with logs
     }
 
     // just to see how it's looks like
-    public void looks(){
-        System.out.print("[  ");
-        Iterator<E> it = this.iterator();
-        for (Iterator<E> iter = it; iter.hasNext(); ) {
-            E elm = iter.next();
-            String string;
-            if (elm == null) {
-                string = "null";
-                System.out.print(string);
-                System.out.print(" , ");
-            }else {
-                string = elm.toString();
-                System.out.print(string);
-                System.out.print(" , ");
-            }
-        }
-        System.out.print("  ]");
-        System.out.println();
+    public void looks() {
+        System.out.print("[ ");
+        for (E e : this) System.out.print(e + " ");
+        System.out.println("]");
     }
-
 
 }

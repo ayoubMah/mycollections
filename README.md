@@ -35,8 +35,8 @@ mycollections/
 - [ ] `MyList<E>` interface (extends `MyCollection<E>`)
 
 #### Abstract Classes
-- [ ] `AbstractMyCollection<E>` (implements `MyCollection<E>`)
-- [ ] `MyAbstractList<E>` (extends `AbstractMyCollection`, implements `MyList<E>`)
+- [ ] `MyAbstractCollection<E>` (implements `MyCollection<E>`)
+- [ ] `MyAbstractList<E>` (extends `MyAbstractCollection`, implements `MyList<E>`)
 
 #### ArrayList Implementation
 - [ ] `MyArrayList<E>` class
@@ -91,7 +91,7 @@ mycollections/
 - [ ] `MyDeque<E>` interface (extends `Queue<E>`)
 
 #### Abstract Classes
-- [ ] `MyAbstractQueue<E>` (extends `AbstractMyCollection`, implements `MyQueue<E>`)
+- [ ] `MyAbstractQueue<E>` (extends `MyAbstractCollection`, implements `MyQueue<E>`)
 
 #### Implementations
 - [ ] Update `MyLinkedList<E>` to implement `MyDeque<E>`
@@ -155,7 +155,7 @@ mycollections/
     - [ ] No index-based access
 
 #### Abstract Classes
-- [ ] `MyAbstractSet<E>` (extends `AbstractMyCollection`, implements `MySet<E>`)
+- [ ] `MyAbstractSet<E>` (extends `MyAbstractCollection`, implements `MySet<E>`)
 
 #### HashSet Implementation
 - [ ] `MyHashSet<E>` class
@@ -351,7 +351,7 @@ mvn jacoco:report
 
 - **Start simple**: ArrayList → LinkedList → HashMap → HashSet → TreeMap → TreeSet
 - **Test-driven development**: Write tests first, then implement
-- **Don't skip abstracts**: AbstractMyCollecFtion and AbstractList save you tons of code
+- **Don't skip abstracts**: MyAbstractCollection and MyAbstractList save you tons of code
 - **Iterator is crucial**: Fail-fast behavior is important for correctness
 - **HashMap before HashSet**: HashSet is just a HashMap wrapper!
 - **TreeMap before TreeSet**: TreeSet is just a TreeMap wrapper!
