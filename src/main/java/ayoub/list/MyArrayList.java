@@ -3,6 +3,7 @@ package ayoub.list;
 
 import ayoub.abstracts.MyAbstractList;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class MyArrayList<E> extends MyAbstractList<E> {
@@ -22,9 +23,19 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     }
 
     private void rangeCheck(int index) {
+        if (index < 0 || index > size){
+            throw new IndexOutOfBoundsException("index: "+index + ", size: "+size);
+        }
     }
 
-    public void ensureCapacity(int index){
+    // this is the magic behind dynamic list
+    // it's just creating a new array with a length bigger then the first one by 50%
+    // and then copy/paste the odl elms of the prev array to the new one
+    public void ensureCapacity(int minCapacity){
+        if (minCapacity > arr.length){
+            int newCap = arr.length + (arr.length >> 1); // 50%
+            arr = Arrays.copyOf(arr, newCap); // todo: it'll be good if you imp yourself the logic of copy/paste
+        }
 
     }
 
@@ -46,7 +57,7 @@ public class MyArrayList<E> extends MyAbstractList<E> {
 
     @Override
     public void add(int index, E elm) {
-        ensureCapacity(size+1);
+        ensureCapacity(size+1); // the minimum capacity accepted to add one elm is size+1
         arr[index] = elm;
         size++;
     }
@@ -58,10 +69,12 @@ public class MyArrayList<E> extends MyAbstractList<E> {
         return true;
     }
 
-
+    // we should get a new array with size - 1 as length
     @Override
     public E remove(int index) {
-        return null;
+        rangeCheck(index);
+        int newLength = size - 1;
+
     }
 
     @Override
