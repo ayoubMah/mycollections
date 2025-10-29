@@ -32,20 +32,20 @@ mycollections/
 #### Core Interfaces
 - [x] `MyCollection<E>` interface (extends `Iterable<E>`)
 - [x] `Iterator<E>` interface (I use just `java.util.Iterator`)
-- [ ] `MyList<E>` interface (extends `MyCollection<E>`)
+- [x] `MyList<E>` interface (extends `MyCollection<E>`)
 
 #### Abstract Classes
-- [ ] `MyAbstractCollection<E>` (implements `MyCollection<E>`)
-- [ ] `MyAbstractList<E>` (extends `MyAbstractCollection`, implements `MyList<E>`)
+- [x] `MyAbstractCollection<E>` (implements `MyCollection<E>`)
+- [x] `MyAbstractList<E>` (extends `MyAbstractCollection`, implements `MyList<E>`)
 
 #### ArrayList Implementation
 - [ ] `MyArrayList<E>` class
-    - [ ] Internal array storage
-    - [ ] Constructor(s) - default capacity
-    - [ ] `add(E element)` with dynamic resizing
-    - [ ] `add(int index, E element)`
-    - [ ] `get(int index)` with bounds checking
-    - [ ] `set(int index, E element)`
+    - [x] Internal array storage
+    - [x] Constructor(s) - default capacity
+    - [x] `add(E element)` with dynamic resizing
+    - [x] `add(int index, E element)`
+    - [x] `get(int index)` with bounds checking
+    - [x] `set(int index, E element)`
     - [ ] `remove(int index)` with element shifting
     - [ ] `remove(Object o)`
     - [ ] `size()`, `isEmpty()`, `clear()`

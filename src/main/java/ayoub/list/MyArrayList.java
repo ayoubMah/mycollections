@@ -31,12 +31,22 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     // this is the magic behind dynamic list
     // it's just creating a new array with a length bigger then the first one by 50%
     // and then copy/paste the odl elms of the prev array to the new one
-    public void ensureCapacity(int minCapacity){
-        if (minCapacity > arr.length){
-            int newCap = arr.length + (arr.length >> 1); // 50%
-            arr = Arrays.copyOf(arr, newCap); // todo: it'll be good if you imp yourself the logic of copy/paste
+    private void grow(int newCapacity){
+        E [] newArr = (E[]) new Object[newCapacity];
+        //arr = Arrays.copyOf(arr, newCap);
+        for (int i = 0; i < size; i++){
+            newArr[i] = arr[i];
         }
+        arr = newArr; // replace the old arr with the new one
+    }
 
+
+    public void ensureCapacity(int minCapacity) {
+        if (minCapacity > arr.length) {
+            int newCap = arr.length + (arr.length >> 1);
+            if (newCap < minCapacity) newCap = minCapacity;
+            grow(newCap);
+        }
     }
 
     @Override
@@ -70,16 +80,27 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     }
 
     // we should get a new array with size - 1 as length
+    // the method return the removed elm
     @Override
     public E remove(int index) {
         rangeCheck(index);
-        int newLength = size - 1;
+        E removed = arr[index];
 
+        for (int i = index; i < size - 1; i++){
+            arr[i] = arr[i+1];
+        }
+        // or we can do it with arraycopy => check the doc
+        //System.arraycopy(arr, index+1, arr, index, size - index - 1);
+        arr[--size] = null;
+        return removed;
     }
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        for (int i = 0; i < size; i++){
+            if (arr[i] == null ? o == null : arr[i].equals(o)) return i;
+        }
+        return -1;
     }
 
     @Override
