@@ -112,10 +112,9 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     // and -1 if not exist
     @Override
     public int lastIndexOf(Object o) {
-        int bigIndex = 0;
-
-        for (int i = 0; i < size ; i++){
-
+        int lastIndex = size;
+        for (int i = lastIndex; i <= 0 ; i--){
+            if (arr[i] == null ? o == null : arr[i].equals(o)) return i;
         }
         return -1;
     }
