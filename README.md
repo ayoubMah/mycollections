@@ -46,13 +46,13 @@ mycollections/
     - [x] `add(int index, E element)`
     - [x] `get(int index)` with bounds checking
     - [x] `set(int index, E element)`
-    - [ ] `remove(int index)` with element shifting
+    - [x] `remove(int index)` with element shifting
     - [x] `remove(Object o)`
     - [x] `size()`, `isEmpty()`, `clear()`
     - [x] `contains(Object o)`
     - [x] `indexOf(Object o)`, `lastIndexOf(Object o)`
-    - [ ] Inner class: `ArrayListIterator` implementing `Iterator<E>`
-    - [ ] `iterator()` method
+    - [x] Inner class: `ArrayListIterator` implementing `Iterator<E>`
+    - [x] `iterator()` method
     - [ ] Fail-fast iterator (ConcurrentModificationException)
 - [ ] `MyArrayListTest` - comprehensive unit tests
 

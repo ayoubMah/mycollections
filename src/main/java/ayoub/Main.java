@@ -1,29 +1,9 @@
 package ayoub;
 
 
+import ayoub.list.MyArrayList;
+
 public class Main {
-
-    /*static class TestMyCollection<E> extends AbstractMyCollection<E> {
-        private final List<E> data = new ArrayList<>();
-
-        @Override
-        public Iterator<E> iterator() {
-            return data.iterator();
-        }
-
-        @Override
-        public int size() {
-            return data.size();
-        }
-
-        @Override
-        public boolean add(E e) {
-            return data.add(e);
-        }
-    }*/
-
-
-
     //======================================================================================================================
     public static final String PURPLE_BRIGHT = "\u001B[95m";
     public static final String YELLOW_BRIGHT = "\u001B[93m";
@@ -53,37 +33,14 @@ public class Main {
         System.out.println("  " + createBorder(110, BORDER));
         // ========================================================================================
 
-        /*TestMyCollection col = new TestMyCollection<>();
-        col.add("ayoub");
-        col.add("simo");
-        col.add("bard");
-        col.add(null);
-        col.add("youssef");
+        MyArrayList<String> list = new MyArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.remove(1);
+        list.add("D");
 
-        System.out.println("Size : " + col.size());
-
-        System.out.println("is my collection has ayoub? =>" + col.contains("ayoub"));
-        System.out.println("is my collection has null? =>" + col.contains(null));
-
-        System.out.println("to array");
-        col.toArray();
-        col.looks();
-
-        System.out.println("let's remove simo");
-        col.remove("simo");
-        System.out.println("the new collection looks like");
-        col.looks();
-
-
-        System.out.println("let's remove null");
-        col.remove(null);
-        System.out.println("the new collection looks like");
-        col.looks();
-
-        System.out.println("let's clean this collection");
-        col.clear();
-        col.looks();*/
-
-
+        System.out.println("List size: " + list.size());
+        list.looks(); // [A, C, D]
     }
 }

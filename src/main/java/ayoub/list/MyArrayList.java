@@ -80,7 +80,7 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     @Override
     public boolean add(E elm) {
         ensureCapacity(size + 1);
-        arr[size + 1] = elm;
+        arr[size++] = elm;
         return true;
     }
 
@@ -113,7 +113,7 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     @Override
     public int lastIndexOf(Object o) {
         int lastIndex = size;
-        for (int i = lastIndex; i <= 0 ; i--){
+        for (int i = lastIndex; i >= 0 ; i--){
             if (arr[i] == null ? o == null : arr[i].equals(o)) return i;
         }
         return -1;
@@ -121,6 +121,22 @@ public class MyArrayList<E> extends MyAbstractList<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new Iterator<E>() {
+            int cursor = 0;
+            @Override
+            public boolean hasNext() {
+                return cursor < size;
+            }
+
+            @Override
+            public E next() {
+                return arr[cursor++];
+            }
+
+            @Override
+            public void remove(){
+                MyArrayList.this.remove(--cursor);
+            }
+        };
     }
 }
